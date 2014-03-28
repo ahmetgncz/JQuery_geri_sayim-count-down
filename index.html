@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title></title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+			
+		var saniye = 20;
+		$.geriyeSay = function(){
+			if (saniye > 1){
+				saniye--;
+				$("#navbar p").text(saniye);
+			} else {
+				
+				window.location.href = "zaman dolunca gidilecek adres";
+			}
+		}
+		$("#navbar p").text(saniye);
+		setInterval("$.geriyeSay()", 1000);
+		
+	});
+	</script>
+	<style type="text/css">
+	body {margin: auto}
+	#navbar {
+	width:250px;
+	height:100px;
+	background-color:gray;
+	color:red;
+	font-size:70px;
+	}
+	</style>
+</head>
+<body>
+<center>
+<div id="navbar">
+	<center><p></p><center>
+</div>
+</center>
+</body>
+</html>
